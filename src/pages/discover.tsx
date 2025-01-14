@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { states } from "@/data/statesView";
 import React from "react";
 
@@ -8,22 +9,22 @@ const SimpleStatesView = () => {
       <nav className="fixed w-full z-50 bg-gray-950/80 backdrop-blur-sm border-b border-gray-800">
         <div className="container mx-auto px-6 py-4">
           <div className="flex justify-between items-center">
-            <a href="/" className="flex items-center space-x-2">
+            <Link href="/" className="flex items-center space-x-2">
               <div className="w-2 h-2 bg-orange-600 rounded-full"></div>
               <h1 className="text-xl text-white font-light tracking-wider">
                 TIMELESS TRAILS
               </h1>
-            </a>
+            </Link>
             <div className="hidden md:flex items-center space-x-12">
-              <a href="#" className="text-orange-600">
+              <Link href="#" className="text-orange-600">
                 Discover
-              </a>
-              <a
+              </Link>
+              <Link
                 href="#"
                 className="text-gray-400 hover:text-white transition-colors"
               >
                 Stories
-              </a>
+              </Link>
             </div>
           </div>
         </div>
@@ -47,7 +48,7 @@ const SimpleStatesView = () => {
         <div className="container mx-auto px-6">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {states.map((state, index) => (
-              <a
+              <Link
                 key={index}
                 href={`/state/${state.name.toLowerCase()}`}
                 className="block group h-96"
@@ -71,7 +72,7 @@ const SimpleStatesView = () => {
                     <p className="text-gray-300">{state.description}</p>
                   </div>
                 </div>
-              </a>
+              </Link>
             ))}
           </div>
         </div>

@@ -12,6 +12,7 @@ import {
 } from "lucide-react";
 import { stateDataMap } from "../../data";
 import { StateData, ContentItem } from "../../data/types";
+import Link from "next/link";
 
 const StatePage: React.FC<{ stateData: StateData }> = ({ stateData }) => {
   const [selectedItem, setSelectedItem] = useState<ContentItem | null>(null);
@@ -55,13 +56,13 @@ const StatePage: React.FC<{ stateData: StateData }> = ({ stateData }) => {
 
         {/* Back button */}
         <div className="absolute top-6 left-6">
-          <a
+          <Link
             href="/"
             className="flex items-center text-white hover:text-orange-600 transition-colors"
           >
             <ChevronLeft className="w-5 h-5" />
             <span className="ml-2">Back to States</span>
-          </a>
+          </Link>
         </div>
 
         <div className="relative container mx-auto px-6 h-full flex items-center">
@@ -175,14 +176,14 @@ const StatePage: React.FC<{ stateData: StateData }> = ({ stateData }) => {
                 </h3>
                 <p className="text-gray-300 mb-6">{selectedItem.desc}</p>
                 {selectedItem.link && (
-                  <a
+                  <Link
                     href={selectedItem.link}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-flex items-center text-orange-600 hover:text-orange-500"
                   >
                     Learn More <ArrowRight className="w-4 h-4 ml-2" />
-                  </a>
+                  </Link>
                 )}
               </div>
             </div>
@@ -248,13 +249,13 @@ const State: NextPage = () => {
 
           {/* Back button */}
           <div className="absolute top-6 left-6">
-            <a
+            <Link
               href="/"
               className="flex items-center text-white hover:text-orange-600 transition-colors"
             >
               <ChevronLeft className="w-5 h-5" />
               <span className="ml-2">Back to States</span>
-            </a>
+            </Link>
           </div>
 
           <div className="absolute inset-0 flex flex-col items-center justify-center px-4">

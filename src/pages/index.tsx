@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 const MinimalIndianLanding = () => {
   const featuredStates = [
     {
@@ -37,18 +39,18 @@ const MinimalIndianLanding = () => {
             </div>
 
             <div className="hidden md:flex items-center space-x-12">
-              <a
+              <Link
                 href="discover"
                 className="text-gray-400 hover:text-white transition-colors"
               >
                 Discover
-              </a>
-              <a
+              </Link>
+              <Link
                 href="#"
                 className="text-gray-400 hover:text-white transition-colors"
               >
                 Stories
-              </a>
+              </Link>
               <button
                 className="px-6 py-2 text-orange-600 border border-orange-600 
                 rounded-sm hover:bg-orange-600 hover:text-white transition-all"
@@ -83,21 +85,21 @@ const MinimalIndianLanding = () => {
               every journey becomes a tale worth telling.
             </p>
             <div className="flex space-x-6">
-              <a
+              <Link
                 className="px-8 py-3 bg-orange-600 text-white rounded-sm 
                 hover:bg-orange-700 transition-colors"
                 href="discover"
               >
                 Explore States
-              </a>
-              <a href="mailto:contact@example.com">
+              </Link>
+              <Link href="mailto:contact@example.com">
                 <button
                   className="px-8 py-3 text-white border border-white rounded-sm 
                 hover:bg-white hover:text-gray-950 transition-colors"
                 >
                   Contact Us
                 </button>
-              </a>
+              </Link>
             </div>
           </div>
         </div>
@@ -115,12 +117,12 @@ const MinimalIndianLanding = () => {
                 Stories Waiting to be Discovered
               </h3>
             </div>
-            <a
+            <Link
               href="discover"
               className="text-gray-400 hover:text-white transition-colors mt-4 md:mt-0"
             >
               View All States →
-            </a>
+            </Link>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
