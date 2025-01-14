@@ -10,25 +10,8 @@ import {
   ChevronLeft,
   LucideIcon,
 } from "lucide-react";
-
-// Types
-interface ContentItem {
-  name: string;
-  img: string;
-  desc: string;
-  link?: string;
-}
-
-interface StateData {
-  name: string;
-  sanskrit: string;
-  headline: string;
-  description: string;
-  coverImage: string;
-  places: ContentItem[];
-  food: ContentItem[];
-  guides: ContentItem[];
-}
+import { stateDataMap } from "../../data";
+import { StateData, ContentItem } from "../../data/types";
 
 const StatePage: React.FC<{ stateData: StateData }> = ({ stateData }) => {
   const [selectedItem, setSelectedItem] = useState<ContentItem | null>(null);
@@ -216,31 +199,24 @@ const State: NextPage = () => {
   const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
-    const fetchStateData = async () => {
-      if (!state) return;
+    if (!state || typeof state !== "string") return;
 
-      try {
-        setIsLoading(true);
-        const response = await fetch(
-          `http://localhost:3000/feed?state=${state}`
-        );
+    try {
+      const data = stateDataMap[state.toLowerCase()];
 
-        if (!response.ok) {
-          throw new Error("State data not found");
-        }
-
-        const data = await response.json();
-        setStateData(data);
-        setError(null);
-      } catch (err) {
+      if (!data) {
         setError("State data not found");
         setStateData(null);
-      } finally {
-        setIsLoading(false);
+      } else {
+        setStateData(data);
+        setError(null);
       }
-    };
-
-    fetchStateData();
+    } catch (err) {
+      setError("State data not found");
+      setStateData(null);
+    } finally {
+      setIsLoading(false);
+    }
   }, [state]);
 
   if (isLoading) {

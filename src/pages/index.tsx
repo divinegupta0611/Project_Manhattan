@@ -1,25 +1,25 @@
-import React, { useState } from "react";
-
 const MinimalIndianLanding = () => {
-  // Curated states with meaningful descriptions
   const featuredStates = [
     {
       name: "Kerala",
       sanskrit: "केरल",
       description: "Where tranquility flows through backwaters",
-      image: "/api/placeholder/800/500",
+      image:
+        "https://images.unsplash.com/photo-1712516905584-37b34fc5de86?q=80&w=5184&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     },
     {
       name: "Rajasthan",
       sanskrit: "राजस्थान",
       description: "Desert stories written in sandstone",
-      image: "/api/placeholder/800/500",
+      image:
+        "https://images.unsplash.com/photo-1712516905584-37b34fc5de86?q=80&w=5184&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     },
     {
       name: "Bengal",
       sanskrit: "बंगाल",
       description: "Where culture paints every corner",
-      image: "/api/placeholder/800/500",
+      image:
+        "https://images.unsplash.com/photo-1712516905584-37b34fc5de86?q=80&w=5184&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     },
   ];
 
@@ -38,7 +38,7 @@ const MinimalIndianLanding = () => {
 
             <div className="hidden md:flex items-center space-x-12">
               <a
-                href="#"
+                href="discover"
                 className="text-gray-400 hover:text-white transition-colors"
               >
                 Discover
@@ -101,17 +101,18 @@ const MinimalIndianLanding = () => {
               every journey becomes a tale worth telling.
             </p>
             <div className="flex space-x-6">
-              <button
+              <a
                 className="px-8 py-3 bg-orange-600 text-white rounded-sm 
                 hover:bg-orange-700 transition-colors"
+                href="discover"
               >
                 Explore States
-              </button>
+              </a>
               <button
                 className="px-8 py-3 text-white border border-white rounded-sm 
                 hover:bg-white hover:text-gray-950 transition-colors"
               >
-                View Map
+                Contact Us
               </button>
             </div>
           </div>
@@ -131,7 +132,7 @@ const MinimalIndianLanding = () => {
               </h3>
             </div>
             <a
-              href="#"
+              href="discover"
               className="text-gray-400 hover:text-white transition-colors mt-4 md:mt-0"
             >
               View All States →
