@@ -49,12 +49,6 @@ const MinimalIndianLanding = () => {
               >
                 Stories
               </a>
-              <a
-                href="#"
-                className="text-gray-400 hover:text-white transition-colors"
-              >
-                Gallery
-              </a>
               <button
                 className="px-6 py-2 text-orange-600 border border-orange-600 
                 rounded-sm hover:bg-orange-600 hover:text-white transition-all"
@@ -68,19 +62,7 @@ const MinimalIndianLanding = () => {
 
       {/* Hero Section */}
       <div className="relative h-screen">
-        {/* Traditional pattern overlay */}
-        <div className="absolute inset-0 opacity-5">
-          <div
-            className="w-full h-full"
-            style={{
-              backgroundImage: `url('/api/placeholder/100/100')`,
-              backgroundSize: "50px 50px",
-              backgroundRepeat: "repeat",
-            }}
-          ></div>
-        </div>
-
-        <div className="absolute inset-0 bg-[url('/api/placeholder/1920/1080')] bg-cover bg-center">
+        <div className="absolute inset-0 bg-[url('/home.jpg')] bg-cover bg-center">
           <div className="absolute inset-0 bg-gray-950/70"></div>
         </div>
 
@@ -108,12 +90,14 @@ const MinimalIndianLanding = () => {
               >
                 Explore States
               </a>
-              <button
-                className="px-8 py-3 text-white border border-white rounded-sm 
+              <a href="mailto:contact@example.com">
+                <button
+                  className="px-8 py-3 text-white border border-white rounded-sm 
                 hover:bg-white hover:text-gray-950 transition-colors"
-              >
-                Contact Us
-              </button>
+                >
+                  Contact Us
+                </button>
+              </a>
             </div>
           </div>
         </div>
@@ -176,62 +160,6 @@ const MinimalIndianLanding = () => {
             every step."
           </blockquote>
           <div className="mt-8 text-orange-600">— Ancient Sanskrit Proverb</div>
-        </div>
-      </div>
-
-      {/* Experience Categories */}
-      <div className="py-24 bg-gray-950">
-        <div className="container mx-auto px-6">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-            <div className="border border-gray-800 p-12 hover:border-orange-600 transition-colors">
-              <h3 className="text-2xl text-white mb-6 font-light">
-                Heritage & Architecture
-              </h3>
-              <p className="text-gray-400 mb-8">
-                From ancient temples to magnificent palaces, discover the
-                architectural marvels that stand as testament to India's rich
-                history.
-              </p>
-              <a href="#" className="text-orange-600 hover:text-orange-500">
-                Explore Heritage →
-              </a>
-            </div>
-            <div className="border border-gray-800 p-12 hover:border-orange-600 transition-colors">
-              <h3 className="text-2xl text-white mb-6 font-light">
-                Arts & Culture
-              </h3>
-              <p className="text-gray-400 mb-8">
-                Immerse yourself in the vibrant tapestry of Indian arts, from
-                classical dance to contemporary expressions.
-              </p>
-              <a href="#" className="text-orange-600 hover:text-orange-500">
-                Discover Arts →
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      {/* Newsletter Section */}
-      <div className="py-24 bg-gray-900 border-t border-gray-800">
-        <div className="container mx-auto px-6 text-center">
-          <h2 className="text-2xl text-white mb-8 font-light">
-            Subscribe to Our Cultural Journey
-          </h2>
-          <div className="max-w-md mx-auto flex">
-            <input
-              type="email"
-              placeholder="Enter your email"
-              className="flex-1 px-4 py-3 bg-gray-800 border border-gray-700 text-white 
-                placeholder-gray-400 focus:outline-none focus:border-orange-600"
-            />
-            <button
-              className="px-6 py-3 bg-orange-600 text-white hover:bg-orange-700 
-              transition-colors"
-            >
-              Subscribe
-            </button>
-          </div>
         </div>
       </div>
     </div>

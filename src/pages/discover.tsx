@@ -8,12 +8,12 @@ const SimpleStatesView = () => {
       <nav className="fixed w-full z-50 bg-gray-950/80 backdrop-blur-sm border-b border-gray-800">
         <div className="container mx-auto px-6 py-4">
           <div className="flex justify-between items-center">
-            <div className="flex items-center space-x-2">
+            <a href="/" className="flex items-center space-x-2">
               <div className="w-2 h-2 bg-orange-600 rounded-full"></div>
               <h1 className="text-xl text-white font-light tracking-wider">
                 TIMELESS TRAILS
               </h1>
-            </div>
+            </a>
             <div className="hidden md:flex items-center space-x-12">
               <a href="#" className="text-orange-600">
                 Discover
@@ -23,12 +23,6 @@ const SimpleStatesView = () => {
                 className="text-gray-400 hover:text-white transition-colors"
               >
                 Stories
-              </a>
-              <a
-                href="#"
-                className="text-gray-400 hover:text-white transition-colors"
-              >
-                Gallery
               </a>
             </div>
           </div>
@@ -56,9 +50,9 @@ const SimpleStatesView = () => {
               <a
                 key={index}
                 href={`/state/${state.name.toLowerCase()}`}
-                className="block group"
+                className="block group h-96"
               >
-                <div className="relative overflow-hidden">
+                <div className="relative h-full w-full overflow-hidden">
                   <img
                     src={state.coverImage}
                     alt={state.name}

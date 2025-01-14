@@ -115,10 +115,11 @@ const StatePage: React.FC<{ stateData: StateData }> = ({ stateData }) => {
             <div
               key={index}
               onClick={() => setSelectedItem(item)}
-              className="group cursor-pointer"
+              className="group cursor-pointer bg-gray-900 rounded-lg overflow-hidden"
             >
-              <div className="relative overflow-hidden">
-                <div className="aspect-w-4 aspect-h-3">
+              {/* Fixed aspect ratio container */}
+              <div className="relative w-full pb-[75%]">
+                <div className="absolute inset-0">
                   <img
                     src={item.img}
                     alt={item.name}
@@ -127,12 +128,13 @@ const StatePage: React.FC<{ stateData: StateData }> = ({ stateData }) => {
                   />
                   <div
                     className="absolute inset-0 bg-gradient-to-t from-gray-950 via-gray-950/50 
-                    to-transparent opacity-90"
+                      to-transparent opacity-90"
                   ></div>
+                  {/* Content overlay */}
                   <div className="absolute inset-0 p-6 flex flex-col justify-end">
                     <h3
                       className="text-xl text-white mb-2 group-hover:text-orange-600 
-                      transition-colors"
+                        transition-colors line-clamp-1"
                     >
                       {item.name}
                     </h3>
@@ -159,11 +161,12 @@ const StatePage: React.FC<{ stateData: StateData }> = ({ stateData }) => {
             </button>
 
             <div className="flex flex-col md:flex-row">
-              <div className="md:w-1/2">
+              {/* Fixed aspect ratio for modal image */}
+              <div className="md:w-1/2 relative pb-[75%] md:pb-0">
                 <img
                   src={selectedItem.img}
                   alt={selectedItem.name}
-                  className="w-full h-full object-cover"
+                  className="absolute inset-0 w-full h-full object-cover md:relative"
                 />
               </div>
               <div className="p-8 md:w-1/2">
