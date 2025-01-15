@@ -7,7 +7,7 @@ const MinimalIndianLanding = () => {
       sanskrit: "केरल",
       description: "Where tranquility flows through backwaters",
       image:
-        "https://images.unsplash.com/photo-1712516905584-37b34fc5de86?q=80&w=5184&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT6hSCb-IEBVJClVTCBad_kQSP05HNAGpbRkg&s",
     },
     {
       name: "Rajasthan",
@@ -21,7 +21,7 @@ const MinimalIndianLanding = () => {
       sanskrit: "बंगाल",
       description: "Where culture paints every corner",
       image:
-        "https://images.unsplash.com/photo-1712516905584-37b34fc5de86?q=80&w=5184&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "https://s7ap1.scene7.com/is/image/incredibleindia/1-howrah-bridge-kolkata-west-bengal-city-hero?qlt=82&ts=1726642884073",
     },
   ];
 
