@@ -61,7 +61,7 @@ const StatePage: React.FC<{ stateData: StateData }> = ({ stateData }) => {
             className="flex items-center text-white hover:text-orange-600 transition-colors"
           >
             <ChevronLeft className="w-5 h-5" />
-            <span className="ml-2">Back to States</span>
+            <span className="ml-2"><a href='../discover.tsx'>Back to States</a></span>
           </Link>
         </div>
 
@@ -154,7 +154,7 @@ const StatePage: React.FC<{ stateData: StateData }> = ({ stateData }) => {
       {selectedItem && (
         <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-gray-950/90">
           <div className="max-w-4xl w-full bg-gray-900 rounded-lg overflow-hidden relative">
-            <button
+            <button title="ds"
               onClick={() => setSelectedItem(null)}
               className="absolute top-4 right-4 text-gray-400 hover:text-white"
             >
