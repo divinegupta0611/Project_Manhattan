@@ -1,6 +1,6 @@
 import { StateData } from "../types";
 
-export const arunachal_pradeshData: StateData = {
+export const arunachalpradeshData: StateData = {
   name: "Arunachal Pradesh",
   sanskrit: "अरुणाचल प्रदेश",
   headline: "The Land of Dawn-Lit Mountains and Pristine Natural Beauty",
